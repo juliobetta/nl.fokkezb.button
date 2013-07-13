@@ -1,6 +1,6 @@
-function doClick(e) {  
+function doClick(e) {
 	// TODO: Non-intrusive messagebox
-	
+
 	//debugger;
 }
 

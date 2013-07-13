@@ -1,11 +1,11 @@
-"#outer": {	
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE
+"#outer": {
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE
 }
 
 "#inner": {
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	
-	layout: "horizontal"
+  width: Ti.UI.SIZE,
+  height: Ti.UI.SIZE,
+
+  layout: "horizontal"
 }
