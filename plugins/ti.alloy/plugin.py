@@ -42,7 +42,7 @@ def compile(config):
                     "/usr/bin/"+binary,
                     "/usr/local/share/npm/bin/"+binary
                 ]
-                
+
                 try:
                     binaryPath = check_output(["which",binary], stderr=subprocess.STDOUT).strip()
                     print "[DEBUG] %s installed at '%s'" % (binary,binaryPath)
@@ -60,19 +60,19 @@ def compile(config):
                         else:
                             print "not found"
                             binaryPath = None
-                        
+
                 if binaryPath is None:
                     print "[ERROR] Couldn't find %s" % binary
                     sys.exit(1)
                 else:
                     paths[binary] = binaryPath
-        
+
             # no guesses on windows, just use the PATH
             elif sys.platform == "win32":
                 paths["alloy"] = "alloy.cmd"
 
 
-            
+
     f = os.path.abspath(os.path.join(config['project_dir'], 'app'))
     if os.path.exists(f):
         print "[INFO] alloy app found at %s" % f
@@ -94,9 +94,9 @@ def compile(config):
         if config['platform']==u'mobileweb':
             builder = config['mobileweb_builder']
             deploytype = config['deploytype']
-        
+
         cfg = "platform=%s,version=%s,simtype=%s,devicefamily=%s,deploytype=%s," % (config['platform'],version,simtype,devicefamily,deploytype)
-        
+
         if sys.platform == "win32":
             cmd = [paths["alloy"], "compile", f, "--no-colors", "--config", cfg]
         else:
@@ -104,7 +104,7 @@ def compile(config):
 
         print "[INFO] Executing Alloy compile:"
         print "[INFO]   %s" % " ".join(cmd)
-        
+
         try:
             print check_output(cmd, stderr=subprocess.STDOUT)
         except subprocess.CalledProcessError as ex:

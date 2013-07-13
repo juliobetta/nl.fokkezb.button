@@ -17,10 +17,10 @@ How to use this widget in your own project?
 * [Download](https://github.com/FokkeZB/nl.fokkezb.pullToRefresh/tags) the latest version of this repository.
 * Copy `app/widgets/nl.fokkezb.button` to your app's `app/widgets` folder.
 * Add the widget as a dependency to your app's `app/config.json` file:
-	
+
 ```javascript
 "dependencies": {
-	"nl.fokkezb.button": "1.1"
+  "nl.fokkezb.button": "1.1"
 }
 ```
 
@@ -29,7 +29,7 @@ How to use this widget in your own project?
 ```xml
 <Widget src="nl.fokkezb.button" onClick="myCallback" icon="icon-on" title="My title" style="ios" />`
 ```
-	
+
 If you want to use icons:
 
 * [Download](https://github.com/k0sukey/TiIconicFont/archive/master.zip) the latest version of IconicFont.
@@ -66,13 +66,13 @@ Add styles by requiring the widget's styles-lib in your app's `alloy.js` and use
 ```javascript
 var Styles = require('nl.fokkezb.button/styles');
 Styles.set('my-style', {
-	borderWidth: 1,
-	borderColor: '#000',
-	backgroundColor: '#ccc',
-	activeStyle: {
-		backgroundColor: '#000',
-		color: '#fff'
-	}
+  borderWidth: 1,
+  borderColor: '#000',
+  backgroundColor: '#ccc',
+  activeStyle: {
+    backgroundColor: '#000',
+    color: '#fff'
+  }
 });
 ```
 
@@ -92,13 +92,13 @@ Of course you can also style the widget like any other view using the `TSS` file
 
 ```javascript
 "#myButton:" {
-	borderWidth: 1,
-	borderColor: '#000',
-	backgroundColor: '#ccc',
-	activeStyle: {
-		backgroundColor: '#000',
-		color: '#fff'
-	}
+  borderWidth: 1,
+  borderColor: '#000',
+  backgroundColor: '#ccc',
+  activeStyle: {
+    backgroundColor: '#000',
+    color: '#fff'
+  }
 }
 ```
 
@@ -107,12 +107,12 @@ You can use `$.myId.applyProperties()` to apply any new properties to the widget
 
 ```javascript
 $.myId.applyProperties({
-	color: 'red'
+  color: 'red'
 });
 ```
 
 ## Event listeners
-Listen to the click-event like you would do with a regular button. 
+Listen to the click-event like you would do with a regular button.
 
 Either in `<Widget />`:
 
@@ -205,8 +205,8 @@ The Font Awesome font is licensed under the [SIL Open Font License](http://scrip
 
 You can get [Ligature Symbols](http://kudakurage.com/ligature_symbols/) for free. This Font is licensed under the SIL Open Font License for download and using. Ligature Symbols has broad support for the modern browser (Chrome, Safari, Firefox, iOS - Mobile Safari, Android Browser).
 
-Appcelerator, Appcelerator Titanium and associated marks and logos are 
-trademarks of Appcelerator, Inc. 
+Appcelerator, Appcelerator Titanium and associated marks and logos are
+trademarks of Appcelerator, Inc.
 
 Titanium is Copyright (c) 2008-2012 by Appcelerator, Inc. All Rights Reserved.
 
